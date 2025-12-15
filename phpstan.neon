@@ -1,0 +1,15 @@
+# phpstan.neon
+includes:
+    # Esta línea incluye la configuración de Larastan
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    # Nivel de rigor de PHPStan. El nivel 5 es un buen punto de partida para CI.
+    level: 5 
+    
+    # Directorios que PHPStan debe analizar
+    paths:
+        - app
+        - database/factories
+        - database/seeders
+        - tests
